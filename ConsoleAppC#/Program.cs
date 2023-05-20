@@ -38,12 +38,51 @@ namespace ConsoleAppC_
                 Console.WriteLine();
                 PrintOptions();
                 Console.WriteLine();
+                List<string> shoppingCart = new List<string>(); //declaring the shopping cart list
+                List<double> itemPrices = new List<double>(); // declaring a list to hold the prices
 
                 int userChoice = Convert.ToInt32(Console.ReadLine());
 
                 if (userChoice == 1)
                 {
                     PrintItems();
+                    int itemChoice = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine();
+
+                    if (itemChoice == 1)
+                    {
+                        shoppingCart.Add("Apples");
+                        itemPrices.Add(1.99);
+                        Console.WriteLine("Apples were successfully added to your cart!");
+                    }
+                    else if (itemChoice == 2)
+                    {
+                        shoppingCart.Add("Bread");
+                        itemPrices.Add(3.99);
+                        Console.WriteLine("Bread was successfully added to your cart!");
+                    }
+                    else if (itemChoice == 3)
+                    {
+                        shoppingCart.Add("Milk");
+                        itemPrices.Add(4.99);
+                        Console.WriteLine("Milk was successfully added to your cart!");
+                    }
+                    else if (itemChoice == 4)
+                    {
+                        shoppingCart.Add("Eggs");
+                        itemPrices.Add(5.99);
+                        Console.WriteLine("Eggs were successfully added to your cart!");
+                    }
+                    else if (itemChoice == 5)
+                    {
+                        shoppingCart.Add("Orange Juice");
+                        itemPrices.Add(5.99);
+                        Console.WriteLine("Orange Juice was successfully added to your cart!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Number");
+                    }
                 }
                 else if (userChoice == 2)
                 {
